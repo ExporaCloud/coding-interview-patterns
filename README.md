@@ -1,6 +1,6 @@
 # Coding Interview Patterns — A Visual Guide
 
-![License](https://img.shields.io/badge/license-CC--BY--4.0-blue) ![Made by Expora](https://img.shields.io/badge/made%20by-Expora-6d28d9) ![Patterns](https://img.shields.io/badge/patterns-7-informational)
+![License](https://img.shields.io/badge/license-MIT-blue) ![Made by Expora](https://img.shields.io/badge/made%20by-Expora-6d28d9) ![Patterns](https://img.shields.io/badge/patterns-7-informational)
 
 > Most coding interview problems are variations of a small set of patterns. Learn to recognize the **structural signal** that triggers each one, and you stop memorizing 500 problems and start solving the ones you have never seen.
 
