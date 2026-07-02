@@ -52,6 +52,12 @@ The window never rescans; `left` only ever moves forward. Answer: **3** (`abc`).
 ## Complexity
 Time O(n). Space O(k) for the window bookkeeping, where k is the number of distinct elements or the charset size.
 
+## Common mistakes
+- **Shrinking with `if` instead of `while`.** After a duplicate or a broken constraint you may need to remove several elements, not one. Loop until the window is valid again.
+- **Measuring `best` while the window is invalid.** Only record the answer after you have restored the constraint.
+- **Off-by-one in the window length.** The size of `[left, right]` is `right - left + 1`, not `right - left`.
+- **Fixed-size windows: forgetting to evict.** With a width of K, every element that enters on the right must push one out on the left, or the window silently grows.
+
 ## vs Two Pointers
 Two pointers often move toward each other from both ends of sorted data. A sliding window is two pointers moving the same direction, both left to right, maintaining a contiguous region you aggregate over. If the region must stay contiguous and you track something inside it, it is a window.
 

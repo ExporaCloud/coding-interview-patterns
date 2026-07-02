@@ -24,6 +24,25 @@ def solve(state):
     return memo[state]
 ```
 
+## Worked example
+**Climbing Stairs (LC 70)** for `n = 5`. You climb 1 or 2 steps at a time; count the distinct ways to reach step `n`. The ways to reach step `i` are the ways to reach `i-1` (then a single step) plus the ways to reach `i-2` (then a double step): `dp[i] = dp[i-1] + dp[i-2]`.
+
+```
+step i:   0   1   2   3   4   5
+dp[i]:    1   1   2   3   5   8
+```
+
+| i | recurrence | dp[i] |
+|:---:|:---|:---:|
+| 0 | base case (one way: stay put) | 1 |
+| 1 | base case | 1 |
+| 2 | dp[1] + dp[0] = 1 + 1 | 2 |
+| 3 | dp[2] + dp[1] = 2 + 1 | 3 |
+| 4 | dp[3] + dp[2] = 3 + 2 | 5 |
+| 5 | dp[4] + dp[3] = 5 + 3 | 8 |
+
+Answer: **8**. Each cell is computed once and reused, so the exponential recursion collapses to a single O(n) pass. Because `dp[i]` only looks back two cells, the whole array can even shrink to two variables.
+
 ## Classic problems
 - Climbing Stairs (LC 70)
 - House Robber (LC 198)
@@ -33,6 +52,12 @@ def solve(state):
 
 ## Complexity
 Time O(number of states x work per transition). Space O(number of states), often reducible to one or two rows when a state depends only on the previous ones.
+
+## Common mistakes
+- **Wrong base cases.** Most DP bugs live in `dp[0]` and `dp[1]`, not in the recurrence.
+- **Filling in the wrong order.** A cell must be computed after everything it depends on; bottom-up needs the correct loop direction.
+- **Forgetting to memoize** the top-down version, which quietly falls back to exponential time.
+- **Mis-naming the state.** If the state does not capture everything that affects the future, the recurrence is subtly wrong no matter how clean it looks.
 
 ## The hard part
 DP is not about the table; it is about naming the state. Ask: what is the smallest set of facts that fully describes where I am? Once the state is right, the recurrence is usually a short case analysis of the choices available.
