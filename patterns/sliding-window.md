@@ -21,6 +21,27 @@ for right in range(n):
     best = max(best, right - left + 1)
 ```
 
+## Worked example
+**Longest Substring Without Repeating Characters (LC 3)** on input `"abcabcbb"`. The window holds the current run of unique characters. When a duplicate arrives, shrink from the left until it is gone.
+
+```
+index:  0   1   2   3   4   5   6   7
+char:   a   b   c   a   b   c   b   b
+```
+
+| right | char | duplicate? | action | window | best |
+|:---:|:---:|:---|:---|:---:|:---:|
+| 0 | a | no | add a | `a` | 1 |
+| 1 | b | no | add b | `ab` | 2 |
+| 2 | c | no | add c | `abc` | **3** |
+| 3 | a | yes | drop left until a is free, add a | `bca` | 3 |
+| 4 | b | yes | drop left until b is free, add b | `cab` | 3 |
+| 5 | c | yes | drop left until c is free, add c | `abc` | 3 |
+| 6 | b | yes | drop left past a and b, add b | `cb` | 3 |
+| 7 | b | yes | drop left until b is free, add b | `b` | 3 |
+
+The window never rescans; `left` only ever moves forward. Answer: **3** (`abc`). That single forward-only sweep is what turns the O(n^2) brute force into O(n).
+
 ## Classic problems
 - Longest Substring Without Repeating Characters (LC 3)
 - Minimum Window Substring (LC 76)
