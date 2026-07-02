@@ -35,5 +35,21 @@ If "X works implies X+1 works" (or the reverse), you can binary search the answe
 | Weighted shortest path, non-negative | Dijkstra |
 | Overlapping subproblems + optimal substructure | Dynamic Programming |
 
+## How the patterns relate
+Several patterns are the same idea with one thing added. Seeing the links makes them easier to recall and to tell apart:
+
+```mermaid
+graph LR
+    Sorted["Sorted array"] --> BS["Binary Search"]
+    Sorted --> TP["Two Pointers"]
+    TP -->|"same direction, contiguous region"| SW["Sliding Window"]
+    BFS["BFS"] -->|"add edge weights"| DJ["Dijkstra"]
+    DFS["DFS / Backtracking"] -->|"add memoization"| DP["Dynamic Programming"]
+```
+
+- **BFS is Dijkstra with every weight equal to 1.** The moment edges cost different amounts, BFS breaks and you need the heap.
+- **DFS plus memoization is top-down DP.** If the same subproblem repeats across branches, cache it and the exponential search collapses.
+- **Sliding Window is Two Pointers moving the same direction** over a contiguous region you aggregate, rather than closing in from both ends.
+
 ## See it run
 The fastest way to internalize a trigger is to watch the pattern execute once. ▶ https://tryexpora.com/algorithm-debugger
