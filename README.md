@@ -2,6 +2,8 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue) ![Made by Expora](https://img.shields.io/badge/made%20by-Expora-6d28d9) ![Patterns](https://img.shields.io/badge/patterns-7-informational)
 
+**Want to watch these patterns actually execute?** Expora is building a visual algorithm debugger that steps through BFS, DFS, Dijkstra, DP and more, one line at a time. **[Join the waitlist →](https://tryexpora.com)**
+
 > Most coding interview problems are variations of a small set of patterns. Learn to recognize the **structural signal** that triggers each one, and you stop memorizing 500 problems and start solving the ones you have never seen.
 
 This is an open guide to the **7 patterns that cover roughly 80% of coding interview problems** — the trigger that fires each one, the classic problems, the complexity, and how to tell apart the patterns that look alike.
