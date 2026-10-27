@@ -6,6 +6,8 @@
 
 This is an open guide to the **7 patterns that cover roughly 80% of coding interview problems** — the trigger that fires each one, the classic problems, the complexity, and how to tell apart the patterns that look alike. Everything here is free markdown, MIT licensed, and reads on its own.
 
+> **Looking for all 15 patterns?** This repo covers the 7 core ones in depth. The [full LeetCode patterns cheat sheet](https://tryexpora.com/coding-interview-patterns) adds Backtracking, Monotonic Stack, Fast & Slow Pointers, Prefix Sum, Heap / Top K, Merge Intervals, In-place Linked List Reversal and Topological Sort. To see a pattern run, [watch the DP table fill step by step](https://tryexpora.com/dp-visualizer).
+
 ---
 
 ## The 7 patterns
