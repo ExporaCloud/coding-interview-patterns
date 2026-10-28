@@ -64,3 +64,5 @@ DP is not about the table; it is about naming the state. Ask: what is the smalle
 
 ## See it run
 Watch the table fill cell by cell, each value pulling from the smaller states it depends on: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [what a dp array is, and the 5 DP patterns for interviews](https://tryexpora.com/blog/dynamic-programming-explained)

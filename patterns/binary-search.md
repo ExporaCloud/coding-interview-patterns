@@ -65,3 +65,5 @@ If the data is sorted and you want one element, it is binary search, not two poi
 
 ## See it run
 Watch the range halve and the invariant hold at each step: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [the 3 binary search templates and the signal for each](https://tryexpora.com/blog/binary-search-patterns)

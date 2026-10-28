@@ -1,10 +1,10 @@
-# DFS and Backtracking
+# Backtracking
 
 ## Trigger
-You need to explore all paths, generate all subsets, permutations, or combinations, or answer "does any path exist". The signal is "all", "every", or a decision tree where each step chooses and may need to undo.
+You need to generate all subsets, permutations or combinations, or search under constraints (N-Queens, Sudoku, Word Search). The signal is "all", "every", or a decision tree where each step chooses and may need to undo.
 
 ## How it works
-Depth-first search commits to a choice, recurses, and comes back. Backtracking adds the undo: choose, explore, un-choose. That un-choose is the whole trick. It restores the state so the next branch starts clean. Every backtracking problem is the same three lines around a recursive call.
+Backtracking is [DFS](dfs.md) over a tree of choices instead of a graph of nodes. It commits to a choice, recurses, and comes back, then adds the undo: choose, explore, un-choose. That un-choose is the whole trick. It restores the state so the next branch starts clean. Every backtracking problem is the same three lines around a recursive call.
 
 ## Diagram
 Building every subset of `[1, 2, 3]` by only ever adding a larger element. Each node is a valid subset and the tree is the search space:
@@ -66,8 +66,10 @@ Time O(branches^depth), exponential by nature. Space O(depth) for the recursion 
 - **No pruning on constrained problems.** N-Queens and Sudoku are intractable without cutting invalid branches early.
 - **Wrong base case,** so recursion records nothing or never terminates.
 
-## vs BFS and DP
-Use DFS over BFS when you need all paths or existence, not the shortest one. When the same subproblem repeats across branches, add memoization and DFS becomes top-down dynamic programming.
+## vs DFS and DP
+Plain [DFS](dfs.md) visits each node once and marks it visited for good. Backtracking un-marks on the way back, because the same element can appear in many different answers. When the same subproblem repeats across branches, add memoization and backtracking becomes top-down [dynamic programming](dynamic-programming.md).
 
 ## See it run
 Watch the decision tree grow, the path push and pop, and pruning cut whole branches: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [the backtracking template for subsets, permutations and N-Queens](https://tryexpora.com/blog/backtracking-patterns)

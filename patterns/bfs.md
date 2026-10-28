@@ -65,3 +65,5 @@ BFS finds the shortest path in unweighted graphs; DFS does not. Use BFS when the
 
 ## See it run
 Watch the queue drain level by level and the frontier expand ring by ring: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [BFS, DFS or Dijkstra? How to pick in an interview](https://tryexpora.com/blog/graph-algorithms-coding-interview)

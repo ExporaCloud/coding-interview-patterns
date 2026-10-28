@@ -56,3 +56,5 @@ Sliding window keeps a contiguous region and both pointers move the same way. Tw
 
 ## See it run
 Watch both pointers move and the search space shrink between them: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [sliding window vs two pointers, and when to use each](https://tryexpora.com/blog/sliding-window-two-pointers)

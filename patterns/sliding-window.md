@@ -63,3 +63,5 @@ Two pointers often move toward each other from both ends of sorted data. A slidi
 
 ## See it run
 Watch the window expand and shrink at every step, with the counts inside it updating live: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [sliding window vs two pointers, and when to use each](https://tryexpora.com/blog/sliding-window-two-pointers)

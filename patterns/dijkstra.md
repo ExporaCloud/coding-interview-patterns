@@ -67,3 +67,5 @@ Use BFS when every edge costs the same (it is Dijkstra with all weights equal to
 
 ## See it run
 Watch the heap hand you the nearest node and the distances relax one edge at a time: ▶ https://tryexpora.com/algorithm-debugger
+
+Go deeper: [BFS, DFS or Dijkstra? How to pick in an interview](https://tryexpora.com/blog/graph-algorithms-coding-interview)
